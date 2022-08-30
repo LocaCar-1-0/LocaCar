@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LocaCar.Views;
 
 namespace LocaCar
 {
@@ -26,6 +27,8 @@ namespace LocaCar
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            TelaPrincipal TlPrincipal = new TelaPrincipal();
+            TlPrincipal.ShowDialog();
 
             //if (con.State == System.Data.ConnectionState.Open)
             //{

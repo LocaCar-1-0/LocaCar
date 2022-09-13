@@ -28,7 +28,7 @@
                 <RowDefinition Height="326*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="GhostWhite">
-                <Image Source="/Images/logo.png"/>
+                <Image Source="/Images/logo2.png"/>
             </Grid>
             <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
                 <StackPanel x:Name="Menu" Margin="10"/>

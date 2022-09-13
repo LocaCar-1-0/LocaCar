@@ -26,11 +26,11 @@
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="White"/>
                         <TextBox x:Name="txtUsername" Margin="10 0" materialDesign:HintAssist.Hint="Enter Username / Email"
-                                 Foreground="White" Width="250" BorderBrush="White" CaretBrush="#FF173E6B" SelectionBrush="#FF173E6B" />
+                                 Foreground="White" Width="250" BorderBrush="White" CaretBrush="#FF173E6B" SelectionBrush="#FF173E6B" TextChanged="txtUsername_TextChanged" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind="Lock" Width="25" Height="25" Foreground="White"/>
-                        <PasswordBox x:Name="txtPassword" Margin="10 0" materialDesign:HintAssist.Hint="********" Foreground="White" Width="250" BorderBrush="White" CaretBrush="#FF173E6B" SelectionBrush="#FF173E6B" />
+                        <PasswordBox x:Name="txtPassword" Margin="10 0" materialDesign:HintAssist.Hint="********" Foreground="White" Width="250" BorderBrush="White" CaretBrush="#FF173E6B" SelectionBrush="#FF173E6B" Cursor="Arrow" />
                     </StackPanel>
                     <StackPanel Margin="10" HorizontalAlignment="Center">
                         <Button Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" 

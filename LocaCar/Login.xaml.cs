@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
+using System.Windows.Controls;  
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -29,7 +29,7 @@ namespace LocaCar
         {
             TelaPrincipal TlPrincipal = new TelaPrincipal();
             TlPrincipal.ShowDialog();
-
+            
             //if (con.State == System.Data.ConnectionState.Open)
             //{
             //    con.Close();
@@ -71,6 +71,11 @@ namespace LocaCar
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

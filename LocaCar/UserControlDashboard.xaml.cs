@@ -1,5 +1,4 @@
-﻿using MaterialDesignThemes.Wpf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LocaCar.Models;
 
 namespace LocaCar
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interação lógica para UserControlDashboard.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControlDashboard : UserControl
     {
-        public MainWindow()
+        public UserControlDashboard()
         {
             InitializeComponent();
-            //Loaded += MainWindow_Loaded;
-            
         }
-
-
     }
 }

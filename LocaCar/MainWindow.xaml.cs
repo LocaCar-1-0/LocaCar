@@ -1,5 +1,4 @@
-﻿using LocaCar.View.ViewModel;
-using MaterialDesignThemes.Wpf;
+﻿using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LocaCar.Models;
 
 namespace LocaCar
 {
@@ -25,10 +25,15 @@ namespace LocaCar
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
+            
+        }
 
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
             var menuRegister = new List<SubItem>();
-            menuRegister.Add(new SubItem("Customers", new UserControlCustomers()));
-            menuRegister.Add(new SubItem("Providers", new UserControlProviders()));
+            //menuRegister.Add(new SubItem("Customers", new UserControlCustomers()));
+            //menuRegister.Add(new SubItem("Providers", new UserControlProviders()));
             menuRegister.Add(new SubItem("Employees"));
             menuRegister.Add(new SubItem("Products"));
             var item6 = new ItemMenu("Register", menuRegister, PackIconKind.Register);
@@ -55,22 +60,22 @@ namespace LocaCar
             menuFinancial.Add(new SubItem("Cash flow"));
             var item4 = new ItemMenu("Financial", menuFinancial, PackIconKind.ScaleBalance);
 
-            Menu.Children.Add(new UserControlMenuItem(item6, this));
-            Menu.Children.Add(new UserControlMenuItem(item1, this));
-            Menu.Children.Add(new UserControlMenuItem(item2, this));
-            Menu.Children.Add(new UserControlMenuItem(item3, this));
-            Menu.Children.Add(new UserControlMenuItem(item4, this));
+            //Menu.Children.Add(new UserControlMenuItem(item6, this));
+            //Menu.Children.Add(new UserControlMenuItem(item1, this));
+            //Menu.Children.Add(new UserControlMenuItem(item2, this));
+            //Menu.Children.Add(new UserControlMenuItem(item3, this));
+            //Menu.Children.Add(new UserControlMenuItem(item4, this));
         }
 
-        internal void SwitchScreen(object sender)
+       private void SwitchScreen(object sender)
         {
-            var screen = ((UserControl)sender);
+            //var screen = ((UserControl)sender);
 
-            if (screen != null)
-            {
-                StackPanelMain.Children.Clear();
-                StackPanelMain.Children.Add(screen);
-            }
+            //if (screen != null)
+            //{
+            //    StackPanelMain.Children.Clear();
+            //    StackPanelMain.Children.Add(screen);
+            //}
         }
     }
 }

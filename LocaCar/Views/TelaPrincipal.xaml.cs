@@ -25,10 +25,7 @@ namespace LocaCar.Views
         public TelaPrincipal()
         {
             InitializeComponent();
-        }
 
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
             var menuRegister = new List<SubItem>();
             menuRegister.Add(new SubItem("Customers", new UserControlDashboard()));
             menuRegister.Add(new SubItem("Providers", new UserControlDashboard()));
@@ -65,7 +62,7 @@ namespace LocaCar.Views
             Menu.Children.Add(new UserControlMenuItem(item4, this));
         }
 
-        public void SwitchScreen(object sender)
+        internal void SwitchScreen(object sender)
         {
             var screen = ((UserControl)sender);
 

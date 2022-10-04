@@ -35,11 +35,6 @@ namespace LocaCar
 
             this.DataContext = itemMenu;        }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-     
-        }
         public void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);

@@ -31,7 +31,7 @@ namespace LocaCar.Views
         {
             var menuRegister = new List<SubItem>();
             menuRegister.Add(new SubItem("Customers", new UserControlDashboard()));
-            //menuRegister.Add(new SubItem("Providers", new UserControlProviders()));
+            menuRegister.Add(new SubItem("Providers", new UserControlDashboard()));
             menuRegister.Add(new SubItem("Employees"));
             menuRegister.Add(new SubItem("Products"));
             var item6 = new ItemMenu("Register", menuRegister, PackIconKind.Register);

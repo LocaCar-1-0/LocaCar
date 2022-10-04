@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LocaCar.Models;
+    
 
 namespace LocaCar
 {
@@ -20,14 +22,26 @@ namespace LocaCar
     /// </summary>
     public partial class UserControlCarros : UserControl
     {
-        public UserControlCarros()
+        MainWindow _context;
+        public UserControlCarros(ItemMenu itemMenu, MainWindow context)
         {
             InitializeComponent();
-        }
+
+            _context = context;
+
+            ExpanderMenu.Visibility = itemMenu.SubItems == null ? Visibility.Collapsed : Visibility.Visible;
+            ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
+
+            this.DataContext = itemMenu;        }
 
         private void InitializeComponent()
         {
             throw new NotImplementedException();
+     
+        }
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
         }
     }
 }

@@ -21,10 +21,10 @@ namespace LocaCar
     /// <summary>
     /// Interação lógica para UserControlCarros.xam
     /// </summary>
-    public partial class UserControlCarros : UserControl
+    public partial class UserControlMenuItem : UserControl
     {
         TelaPrincipal _context;
-        public UserControlCarros(ItemMenu itemMenu, TelaPrincipal context)
+        public UserControlMenuItem(ItemMenu itemMenu, TelaPrincipal context)
         {
             InitializeComponent();
 

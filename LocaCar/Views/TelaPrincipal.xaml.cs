@@ -65,15 +65,15 @@ namespace LocaCar.Views
             Menu.Children.Add(new UserControlMenuItem(item4, this));
         }
 
-        private void SwitchScreen(object sender)
+        public void SwitchScreen(object sender)
         {
-            //var screen = ((UserControl)sender);
+            var screen = ((UserControl)sender);
 
-            //if (screen != null)
-            //{
-            //    StackPanelMain.Children.Clear();
-            //    StackPanelMain.Children.Add(screen);
-            //}
+            if (screen != null)
+            {
+                StackPanelMain.Children.Clear();
+                StackPanelMain.Children.Add(screen);
+            }
         }
     }
 }

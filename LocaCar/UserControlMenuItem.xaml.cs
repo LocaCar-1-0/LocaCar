@@ -1,4 +1,5 @@
 ﻿using System;
+using LocaCar.Views;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,8 @@ namespace LocaCar
     /// </summary>
     public partial class UserControlCarros : UserControl
     {
-        MainWindow _context;
-        public UserControlCarros(ItemMenu itemMenu, MainWindow context)
+        TelaPrincipal _context;
+        public UserControlCarros(ItemMenu itemMenu, TelaPrincipal context)
         {
             InitializeComponent();
 
@@ -39,7 +40,7 @@ namespace LocaCar
             throw new NotImplementedException();
      
         }
-        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
         }
